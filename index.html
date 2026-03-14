@@ -17,70 +17,50 @@
 <link rel="icon" href="solar-bg.png">
 
 <style>
-
+/* --- Reset --- */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, sans-serif;
 }
-
 body{
 line-height:1.6;
 background:#f4f7f9;
 }
 
-/* Header */
-
+/* --- Header --- */
 header{
 background:#0f9d58;
 color:white;
 padding:25px;
 text-align:center;
 }
+header h1{font-size:32px;}
 
-header h1{
-font-size:32px;
-}
-
-/* Navigation */
-
+/* --- Navigation --- */
 nav{
 background:#087f45;
 padding:12px;
 text-align:center;
 }
-
 nav a{
 color:white;
 margin:15px;
 text-decoration:none;
 font-weight:bold;
 }
+nav a:hover{text-decoration:underline;}
 
-nav a:hover{
-text-decoration:underline;
-}
-
-/* Hero */
-
+/* --- Hero --- */
 .hero{
 padding:70px 20px;
 text-align:center;
 background:linear-gradient(to right,#0f9d58,#34a853);
 color:white;
 }
-
-.hero h2{
-font-size:36px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:25px;
-}
-
+.hero h2{font-size:36px;margin-bottom:15px;}
+.hero p{font-size:18px;margin-bottom:25px;}
 .btn{
 background:#ffcc00;
 padding:14px 28px;
@@ -90,72 +70,68 @@ border-radius:6px;
 font-weight:bold;
 }
 
-/* Section */
+/* --- Sections --- */
+section{padding:60px 20px; max-width:1100px; margin:auto;}
+.section-title{text-align:center;margin-bottom:35px;}
 
-section{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:35px;
-}
-
-/* Cards */
-
+/* --- Cards --- */
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
-
 .card{
 background:white;
 padding:25px;
 border-radius:8px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 text-align:center;
+transition:0.3s;
 }
+.card:hover{transform:translateY(-8px);}
+.card h3{margin-bottom:10px;color:#0f9d58;}
 
-.card h3{
-margin-bottom:10px;
-color:#0f9d58;
-}
-
-/* Gallery */
-
+/* --- Gallery --- */
 .gallery{
 display:flex;
 flex-wrap:wrap;
 gap:20px;
 justify-content:center;
 }
-
 .gallery img{
 width:300px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Contact */
-
+/* --- Contact --- */
 .contact{
 text-align:center;
 background:#e8f5e9;
 padding:40px;
 border-radius:10px;
 }
-
-/* Map */
-
-.map{
-margin-top:25px;
+.contact input, .contact textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
 }
+.contact button{
+background:#0f9d58;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+.contact button:hover{background:#087f45;}
 
-/* Footer */
+/* --- Map --- */
+.map{margin-top:25px;}
 
+/* --- Footer --- */
 footer{
 text-align:center;
 padding:25px;
@@ -163,8 +139,7 @@ background:#222;
 color:white;
 }
 
-/* WhatsApp */
-
+/* --- WhatsApp --- */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -177,157 +152,115 @@ text-decoration:none;
 font-weight:bold;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
-
 </style>
-
 </head>
 
 <body>
 
+<!-- Header -->
 <header>
-
 <h1>Leela Aditya Solar Enterprises</h1>
 <p>Affordable Solar Power for Your Home</p>
-
 </header>
 
+<!-- Navigation -->
 <nav>
-
 <a href="#services">Services</a>
 <a href="#gallery">Installations</a>
+<a href="#reviews">Reviews</a>
+<a href="#subsidy">Subsidy</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
+<!-- Hero -->
 <div class="hero">
-
 <h2>Switch to Solar & Save Money</h2>
-
 <p>We install solar panels for homes, farms, and businesses in Akiveedu.</p>
-
 <a class="btn" href="#contact">Get Free Consultation</a>
-
 </div>
 
-<!-- WHY CHOOSE US -->
-
+<!-- Why Choose Us -->
 <section>
-
 <h2 class="section-title">Why Choose Us</h2>
-
 <div class="services">
-
-<div class="card">
-<h3>50+ Installations</h3>
-<p>Successful solar installations for homes and farms.</p>
+<div class="card"><h3>50+ Installations</h3><p>Successful solar installations for homes and farms.</p></div>
+<div class="card"><h3>Affordable Pricing</h3><p>Budget friendly solar systems with long life.</p></div>
+<div class="card"><h3>Local Service</h3><p>Quick installation and support in Akiveedu and nearby villages.</p></div>
 </div>
-
-<div class="card">
-<h3>Affordable Pricing</h3>
-<p>Budget friendly solar systems with long life.</p>
-</div>
-
-<div class="card">
-<h3>Local Service</h3>
-<p>Quick installation and support in Akiveedu and nearby villages.</p>
-</div>
-
-</div>
-
 </section>
 
-<!-- SERVICES -->
-
+<!-- Services -->
 <section id="services">
-
 <h2 class="section-title">Our Services</h2>
-
 <div class="services">
-
-<div class="card">
-<h3>Home Solar Installation</h3>
-<p>Rooftop solar panel systems for homes to reduce electricity bills.</p>
+<div class="card"><h3>Home Solar Installation</h3><p>Rooftop solar panel systems for homes to reduce electricity bills.</p></div>
+<div class="card"><h3>Farm Solar Solutions</h3><p>Solar pumps and power systems for agriculture irrigation.</p></div>
+<div class="card"><h3>Solar Maintenance</h3><p>Repair and maintenance for solar panels and inverters.</p></div>
 </div>
-
-<div class="card">
-<h3>Farm Solar Solutions</h3>
-<p>Solar pumps and power systems for agriculture irrigation.</p>
-</div>
-
-<div class="card">
-<h3>Solar Maintenance</h3>
-<p>Repair and maintenance for solar panels and inverters.</p>
-</div>
-
-</div>
-
 </section>
 
-<!-- GALLERY -->
-
+<!-- Gallery -->
 <section id="gallery">
-
 <h2 class="section-title">Our Solar Installations</h2>
-
 <div class="gallery">
-
 <img src="solar1.jpg" alt="Rooftop solar panel installation in Akiveedu">
-
 <img src="solar2.jpg" alt="Home solar system installed for electricity saving">
-
 <img src="solar3.jpg" alt="Solar pump installation for agriculture farm">
-
 </div>
-
 </section>
 
-<!-- CONTACT -->
+<!-- Customer Reviews -->
+<section id="reviews">
+<h2 class="section-title">Customer Reviews</h2>
+<div class="services">
+<div class="card"><p>★★★★★</p><p>Very good solar installation service. Our electricity bill reduced a lot.</p><p><b>– Ramesh, Akiveedu</b></p></div>
+<div class="card"><p>★★★★★</p><p>Affordable price and quick installation for our farm solar pump.</p><p><b>– Suresh, Bhimavaram</b></p></div>
+</div>
+</section>
 
+<!-- Solar Subsidy -->
+<section id="subsidy">
+<h2 class="section-title">Solar Subsidy Information</h2>
+<div class="card">
+<p>Government solar subsidy available for residential rooftop solar systems under PM Surya Ghar scheme.</p>
+<p>Contact us to know subsidy eligibility and installation process.</p>
+</div>
+</section>
+
+<!-- Contact + Enquiry Form -->
 <section id="contact">
-
 <div class="contact">
-
 <h2>Contact Us</h2>
-
 <p><b>Owner:</b> Pamidi Lakshmi Narayana</p>
-
 <p><b>Phone:</b> +91 9515868859</p>
-
 <p><b>Location:</b> Akiveedu, Andhra Pradesh</p>
-
 <p>Call us today for solar installation and reduce electricity bills.</p>
 
+<h3 style="margin-top:30px;">Request Solar Quote</h3>
+<form action="https://formspree.io/f/xyzabcd" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="text" name="location" placeholder="Village / Town">
+<textarea name="message" placeholder="Solar requirement"></textarea>
+<button type="submit">Submit Enquiry</button>
+</form>
+
 <div class="map">
-
 <iframe
-src="https://https://maps.app.goo.gl/dVMxmkn9aKp2kojV9"
-width="100%"
-height="300"
-style="border:0;">
-</iframe>
-
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.123456789!2d81.123456789!3d16.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c1b2c3d4e5f6%3A0xabcdef1234567890!2sAkiveedu!5e0!3m2!1sen!2sin!4v1612345678901!5m2!1sen!2sin"
+width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
 </div>
-
 </section>
 
+<!-- Footer -->
 <footer>
-
 <p>© 2026 Leela Aditya Solar Enterprises</p>
-
 </footer>
 
-<a href="https://wa.me/919515868859?text=Hello%20I%20want%20solar%20installation%20details"
-
-class="whatsapp"
-
-target="_blank">
-
-Chat on WhatsApp
-
-</a>
+<!-- WhatsApp -->
+<a href="https://wa.me/919515868859?text=Hello%20I%20want%20solar%20installation%20details" class="whatsapp" target="_blank">Chat on WhatsApp</a>
 
 </body>
-
 </html>
